@@ -7,6 +7,8 @@ public class OptionalExample {
     public static void main(String[] args) {
         // beforeJava8();
         afterJava8();
+
+        printTestMessage("Raja");
     }
 
     public static void beforeJava8() {
@@ -27,8 +29,13 @@ public class OptionalExample {
 
         Optional<String> valueOf = Optional.ofNullable(str[7]);
         System.out.println(valueOf);
-        System.out.println("End of the program");
 
+
+    }
+
+    public static void printTestMessage(String name) {
+        Optional.ofNullable(name)
+                .ifPresent(personName -> System.out.println("Good Morning - " + personName));
     }
 
 }
