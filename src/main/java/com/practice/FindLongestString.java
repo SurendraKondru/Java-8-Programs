@@ -1,4 +1,4 @@
-package com.java8;
+package com.practice;
 
 import java.util.Arrays;
 
@@ -14,17 +14,15 @@ public class FindLongestString {
     }
 
     public static String findLongestString(String[] str) {
-        return Arrays.stream(str)
+        /*return Arrays.stream(str)
                 .reduce((a, b) -> a.length() > b.length() ? a : b)
-                .orElse("");
+                .orElse("");*/
 
 
-
-      /*  return Arrays.stream(str)
+        return Arrays.stream(str)
                 .sorted((s1, s2) -> s2.length() - s1.length())
                 .findFirst()
                 .orElse(null);
-      */
     }
 
     public static String findSecondLongestString(String[] str) {

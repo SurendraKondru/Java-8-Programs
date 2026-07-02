@@ -1,4 +1,4 @@
-package com.java8;
+package com.practice;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +16,7 @@ public class StartsWithOne {
         final List<String> collect = Arrays.stream(numbers)
                 .boxed()
                 .map(s -> s + "")
-                .filter(s -> s.startsWith("2"))
+                .filter(s -> s.startsWith("1"))
                 .collect(Collectors.toList());
         System.out.println(collect);
     }

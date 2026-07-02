@@ -1,6 +1,7 @@
-package com.java8;
+package com.practice;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -18,12 +19,12 @@ public class PredicateExample {
                 .filter(i -> i % 2 == 0)
                 .collect(Collectors.toList());
 
-        //System.out.println(collected);
+        System.out.println(collected);
 
         // 3rd non repeated number
 
         final Integer integer = list.stream().
-                collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet()
                 .stream()
                 .filter(e -> e.getValue() == 1)
@@ -32,7 +33,7 @@ public class PredicateExample {
                 .findFirst()
                 .orElse(null);
 
-        System.out.println("3rd non repeated number" + integer);
+        System.out.println("3rd non repeated number : " + integer);
 
     }
 }
