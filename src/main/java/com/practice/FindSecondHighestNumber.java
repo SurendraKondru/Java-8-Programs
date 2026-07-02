@@ -10,7 +10,7 @@ public class FindSecondHighestNumber {
         final int secondHighestNumber = findSecondHighestNumber(new int[]{10, 20, 5, 2, 11, 34, 8, 9, 12});
         System.out.println("Second Highest Number :: " + secondHighestNumber);
     }
-
+// this is for testing the git commands
     public static int findSecondHighestNumber(int[] nums) {
 
         return Arrays.stream(nums).boxed()
